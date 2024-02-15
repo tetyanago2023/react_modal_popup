@@ -1,12 +1,15 @@
 import {useState} from "react";
 import Modal from "./modal";
-
+import "./modal.css";
 
 const ModalTest = () => {
     const [showModalPopup, setShowModalPopup] = useState(false);
 
     const handleToggleModalPopup = () => {
         setShowModalPopup(!showModalPopup);
+    }
+    function onClose() {
+        setShowModalPopup(false);
     }
 
     return (
@@ -16,7 +19,7 @@ const ModalTest = () => {
             </button>
             {
                 showModalPopup
-                    ? <Modal />
+                    ? <Modal onClose={onClose} body={<div>Customized Modal Body</div>}/>
                     : null
             }
         </div>
