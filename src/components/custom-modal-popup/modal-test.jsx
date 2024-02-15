@@ -19,7 +19,12 @@ const ModalTest = () => {
             </button>
             {
                 showModalPopup
-                    ? <Modal onClose={onClose} body={<div>Customized Modal Body</div>}/>
+                    ? <Modal
+                        id={"custom-id"}
+                        header={<h1>Customized Header</h1>}
+                        footer={<h1>Customized Footer</h1>}
+                        onClose={onClose}
+                        body={<div>Customized Modal Body</div>}/>
                     : null
             }
         </div>
