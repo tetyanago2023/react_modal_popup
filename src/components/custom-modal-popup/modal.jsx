@@ -1,4 +1,3 @@
-
 const Modal = ({id, header, body, footer, onClose}) => {
 
     return (
